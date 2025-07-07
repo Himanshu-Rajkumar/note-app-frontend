@@ -264,7 +264,7 @@ const Home = () => {
       content: note.content,
       category: note.category,
       isFinancial: note.isFinancial,
-      amount: note.amount.toString(),
+       amount: note.amount ? note.amount.toString() : "", // Safe conversion
       transactionType: note.transactionType,
       color: note.color,
     })

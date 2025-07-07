@@ -78,7 +78,7 @@ const Header = () => {
 
     try {
       const url = isLogin ? "/api/auth/login" : "/api/auth/register"
-      const response = await fetch(`http://localhost:5000${url}`, {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}${url}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
